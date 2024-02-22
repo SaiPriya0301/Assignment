@@ -5,6 +5,17 @@ import { FaBackward, FaForward } from "react-icons/fa";
 const NowPlayingCard = ({ currentFile, goToNextTrack, goToPreviousTrack }) => {
   const audioRef = useRef(null);
 
+  const playAudio = async () => {
+    if (audioRef.current) {
+      try {
+        await audioRef.current.play();
+      } catch (error) {
+        console.error('Error playing audio:', error);
+        // Handle errors, for example, due to autoplay policy
+      }
+    }
+  };
+
   useEffect(() => {
     // Ensure the audio element is present
     if (audioRef.current) {
@@ -13,6 +24,9 @@ const NowPlayingCard = ({ currentFile, goToNextTrack, goToPreviousTrack }) => {
         localStorage.getItem("audioPlaybackTime") || 0
       );
       audioRef.current.currentTime = savedTime;
+      if(savedTime> 0) {
+        playAudio()
+      }
 
       // Define the function to update the playback time in storage
       const updatePlaybackTime = () => {

@@ -75,9 +75,7 @@ function App() {
             key={file.id}
             onClick={() => handleSelectAudio(index)}
           >
-            <p className="w-[70%] items-center font-medium">
-              Audio {file.name}
-            </p>
+            <p className="w-[70%] items-center font-medium">{file.name}</p>
             <FaPlay className="[30%] items-center" />
           </div>
         ))}
