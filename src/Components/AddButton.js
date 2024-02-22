@@ -1,6 +1,7 @@
 import React from 'react'
 
 export const AddButton= ({handleFileUpload}) => {
+  
   return (
     <div className='w-[50%] text-center'>
     <input

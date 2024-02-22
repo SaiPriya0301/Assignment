@@ -10,25 +10,21 @@ const NowPlayingCard = ({ currentFile, goToNextTrack, goToPreviousTrack }) => {
       try {
         await audioRef.current.play();
       } catch (error) {
-        console.error('Error playing audio:', error);
-        // Handle errors, for example, due to autoplay policy
+        console.error("Error playing audio:", error);
       }
     }
   };
 
   useEffect(() => {
-    // Ensure the audio element is present
     if (audioRef.current) {
-      // Retrieve the stored playback time and parse it as a float
       const savedTime = parseFloat(
         localStorage.getItem("audioPlaybackTime") || 0
       );
       audioRef.current.currentTime = savedTime;
-      if(savedTime> 0) {
-        playAudio()
+      if (savedTime > 0) {
+        playAudio();
       }
 
-      // Define the function to update the playback time in storage
       const updatePlaybackTime = () => {
         localStorage.setItem(
           "audioPlaybackTime",
@@ -36,13 +32,10 @@ const NowPlayingCard = ({ currentFile, goToNextTrack, goToPreviousTrack }) => {
         );
       };
 
-      // Add event listener for time updates
       audioRef.current.addEventListener("timeupdate", updatePlaybackTime);
 
-      // Add event listener for when the audio ends
       audioRef.current.addEventListener("ended", goToNextTrack);
 
-      // Cleanup function to remove the event listeners
       return () => {
         if (audioRef.current) {
           audioRef.current.removeEventListener(
@@ -54,6 +47,7 @@ const NowPlayingCard = ({ currentFile, goToNextTrack, goToPreviousTrack }) => {
       };
     }
   }, [goToNextTrack]);
+  
   return (
     <div className="bg-cyan-700 items-center flex flex-col py-6 rounded-lg hover:border-teal-900 border w-[100%] px-14">
       <FaMusic size={100} />
