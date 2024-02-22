@@ -1,6 +1,6 @@
 # About The Developer
 
-This project was developed by Sai Priya. If you have any query regarding the project,you can reach out to me at[LinkedIn](https://www.linkedin.com/in/g-sai-priya-1ab66b263/) and  via email at [gspriya7337@gmail.com](mailto:gspriya7337@gmail.com)
+This project was developed by Sai Priya. If you have any query regarding the project,you can reach out to me at [LinkedIn](https://www.linkedin.com/in/g-sai-priya-1ab66b263/) and  via email at [gspriya7337@gmail.com](mailto:gspriya7337@gmail.com)
 
 # React + Tailwind CSS
 
