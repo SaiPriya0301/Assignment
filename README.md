@@ -10,7 +10,7 @@ This project is to add audio files and display playlist. I have used IndexedDB a
 
 1.Clone the repository to your local machine.
 
-2.Start Client
+2.Start Client.
 
 - Navigate to the client directory of the project in your terminal.
 - Install the dependencies by running `npm install`.
