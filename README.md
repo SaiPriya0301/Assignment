@@ -12,9 +12,9 @@ This project is to add audio files and display playlist. I have used IndexedDB a
 
 2.Start Client
 
-● Navigate to the client directory of the project in your terminal.
-● Install the dependencies by running npm install.
-● Start the development server by running npm run dev.
-● Open your browser and navigate to url provided while starting client to view the application.
+- ● Navigate to the client directory of the project in your terminal.
+- ● Install the dependencies by running `npm install`.
+- ● Start the development server by running `npm run dev`.
+- ● Open your browser and navigate to url provided while starting client to view the application.
 
 Now, you should have the project running on your local machine.
